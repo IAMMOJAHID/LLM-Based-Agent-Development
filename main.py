@@ -6,7 +6,7 @@ from prompts import (
     DEFAULT_CODE_SYSTEM_PROMPT,
 )
 
-login("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")
+login("")
 pytesseract.pytesseract.tesseract_cmd = r'd:\hugging face model\agent\.venv\lib\site-packages'
 agent = ReactCodeAgent(tools=[], system_prompt=DEFAULT_CODE_SYSTEM_PROMPT, add_base_tools=True , additional_authorized_imports=['requests', 'bs4', 'pygame', 'PIL', 'numpy', 'pytesseract', 'nltk', 'os'])
 ans=agent.run(task="Read the image whose path store in `image_path` using PIL and convert it to RGB formate and then answer the question store in `question`", 
